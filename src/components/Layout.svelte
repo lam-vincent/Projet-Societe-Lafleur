@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import Footer from './Footer.svelte';
 </script>
 
 <div class="wrapper">
@@ -10,7 +11,7 @@
 		<div class="menu"><span>menu</span></div>
 		<div class="page"><slot /></div>
 	</div>
-	<div class="footer"><span>footer</span></div>
+	<Footer />
 </div>
 
 <style>
@@ -22,7 +23,7 @@
 
 	.header {
 		height: 8rem;
-		background-color: blue;
+		background-color: #42b5d3;
 	}
 
 	.middle {
@@ -32,16 +33,11 @@
 
 	.menu {
 		width: 20rem;
-		background-color: green;
+		background-color: #e5e7eb;
 	}
 
 	.page {
-		background-color: red;
+		background-color: #f8fafc;
 		flex-grow: 1;
-	}
-
-	.footer {
-		height: 8rem;
-		background-color: yellow;
 	}
 </style>
