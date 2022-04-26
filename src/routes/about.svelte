@@ -3,5 +3,5 @@
 </script>
 
 <Layout>
-	<span>pkjhkjhkjhage</span>
+	<span>about</span>
 </Layout>
