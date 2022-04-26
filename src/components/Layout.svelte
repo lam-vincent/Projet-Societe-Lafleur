@@ -1,12 +1,11 @@
 <script>
 	import '../app.css';
 	import Footer from './Footer.svelte';
+	import Header from './Header.svelte';
 </script>
 
 <div class="wrapper">
-	<div class="header">
-		<span>header</span>
-	</div>
+	<Header />
 	<div class="middle">
 		<div class="menu"><span>menu</span></div>
 		<div class="page"><slot /></div>
@@ -19,11 +18,6 @@
 		display: flex;
 		height: 100vh;
 		flex-direction: column;
-	}
-
-	.header {
-		height: 8rem;
-		background-color: #42b5d3;
 	}
 
 	.middle {

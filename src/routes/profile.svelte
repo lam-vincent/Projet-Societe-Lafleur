@@ -3,5 +3,5 @@
 </script>
 
 <Layout>
-	<span>page</span>
+	<span>profile</span>
 </Layout>

@@ -13,6 +13,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@smui/button": "^6.0.0-beta.16",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
@@ -29,6 +30,8 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "svelte-icons": "^2.1.0",
+    "svelte-material-ui": "^6.0.0-beta.16"
   }
 }
