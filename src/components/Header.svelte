@@ -16,7 +16,7 @@
 	@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
 
 	.header {
-		height: 8rem;
+		height: 14rem;
 		background-color: #42b5d3;
 		display: flex;
 		align-items: center;

@@ -1,19 +1,25 @@
 <script lang="ts">
-	import Button, { Group, Label } from '@smui/button';
+	import Tab, { Label } from '@smui/tab';
+	import TabBar from '@smui/tab-bar';
+	import Button from '@smui/button';
+
+	let active = 'Home';
 </script>
 
-<Group>
-	<Group variant="raised">
-		<Button variant="raised">
-			<Label>Home</Label>
-		</Button>
+<div>
+	<TabBar
+		tabs={['Accueil', 'Bulbes', 'Rosiers', 'Plantes à massif', 'Contact']}
+		let:tab
+		bind:active
+	>
+		<Tab {tab}>
+			<Label>{tab}</Label>
+		</Tab>
+	</TabBar>
 
-		<Button variant="raised">
-			<Label>About</Label>
-		</Button>
-
-		<Button variant="raised">
-			<Label>Profile</Label>
-		</Button>
-	</Group>
-</Group>
+	<div style="margin-top: 1em;">
+		{#each ['Accueil', 'Bulbes', 'Rosiers', 'Plantes à massif', 'Contact'] as tab}
+			<Button on:click={() => (active = tab)}><Label>{tab}</Label></Button>
+		{/each}
+	</div>
+</div>
