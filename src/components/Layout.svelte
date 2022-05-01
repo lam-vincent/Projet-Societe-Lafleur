@@ -2,12 +2,13 @@
 	import '../app.css';
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
+	import Menu from './Menu.svelte';
 </script>
 
 <div class="wrapper">
 	<Header />
 	<div class="middle">
-		<div class="menu"><span>menu</span></div>
+		<div class="menu"><Menu /></div>
 		<div class="page"><slot /></div>
 	</div>
 	<Footer />
@@ -27,7 +28,6 @@
 
 	.menu {
 		width: 20rem;
-		background-color: #e5e7eb;
 	}
 
 	.page {
