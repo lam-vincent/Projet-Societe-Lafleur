@@ -12,8 +12,6 @@
 		<Textfield variant="outlined" bind:value={valueB} {label}>
 			<HelperText slot="helper">{value}</HelperText>
 		</Textfield>
-
-		<pre class="status">Value: {valueB}</pre>
 	</div>
 </div>
 

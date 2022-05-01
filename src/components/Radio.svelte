@@ -16,8 +16,6 @@
 	{/each}
 </div>
 
-<pre class="status">Selected: {onoff}</pre>
-
 <style>
 	.wrapper {
 		display: flex;

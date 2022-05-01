@@ -6,6 +6,7 @@
 	import Radio from '../components/Radio.svelte';
 	import Select from '../components/Select.svelte';
 	import Textarea from '../components/Textarea.svelte';
+	import Button from '../components/Button.svelte';
 
 	function submit() {
 		console.log('rien');
@@ -24,5 +25,5 @@
 	<Text label="Sujet" value="Entrez le sujet de votre mail" />
 	<Textarea label="Contenu" helper="Tapez ici votre mail" />
 
-	<button on:click={submit}> Envoyer </button>
+	<Button label="Envoyer" />
 </Layout>

@@ -15,8 +15,6 @@
 				<Option value={fruit}>{fruit}</Option>
 			{/each}
 		</Select>
-
-		<pre class="status">Selected: {value}</pre>
 	</div>
 </div>
 
