@@ -1,7 +1,10 @@
 <script lang="ts">
 	import FaMinusCircle from 'svelte-icons/fa/FaMinusCircle.svelte';
 	import FaPlusCircle from 'svelte-icons/fa/FaPlusCircle.svelte';
+	import Button, { Label } from '@smui/button';
+	import IconButton from '@smui/icon-button';
 
+	let clicked = 0;
 	export let amount = 0;
 </script>
 
@@ -17,10 +20,18 @@
 		</div>
 		<div class="content">une très belle fleur</div>
 		<div class="order">
-			<div class="logo"><FaMinusCircle /></div>
+			<div class="logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaMinusCircle /></IconButton>
+			</div>
 			<input bind:value={amount} />
-			<div class="logo"><FaPlusCircle /></div>
-			<span class="basket">Ajouter au panier</span>
+			<div class="logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaPlusCircle /></IconButton>
+			</div>
+			<span class="basket">
+				<Button on:click={() => clicked++} variant="raised">
+					<Label>Ajouter au panier</Label>
+				</Button></span
+			>
 		</div>
 	</div>
 </div>
@@ -80,7 +91,6 @@
 	}
 
 	.logo {
-		width: 2rem;
 		display: flex;
 		align-items: center;
 	}
@@ -92,8 +102,5 @@
 
 	.basket {
 		text-align: center;
-		background-color: lightgreen;
-		border-radius: 4rem;
-		padding: 0.6rem;
 	}
 </style>
