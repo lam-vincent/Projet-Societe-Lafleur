@@ -2,8 +2,11 @@
 	import '../app.css';
 	import FaHandHoldingHeart from 'svelte-icons/fa/FaHandHoldingHeart.svelte';
 	import Navbar from './Navbar.svelte';
+	import Badge from './Badge.svelte';
+	import IconButton from '@smui/icon-button';
 	import FaUserCircle from 'svelte-icons/fa/FaUserCircle.svelte';
 	import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte';
+	let clicked = 0;
 </script>
 
 <div class="header">
@@ -14,13 +17,16 @@
 		<h1><strong>Société Lafleur</strong></h1>
 		<Navbar />
 	</div>
-	<div class="user">
-		<span class="username">Vincent LAM</span>
-		<div class="user-logo">
-			<FaUserCircle />
-		</div>
-		<div class="user-logo">
-			<FaSignOutAlt />
+	<div class="container">
+		<Badge />
+		<div class="user">
+			<span class="username">Vincent LAM</span>
+			<div class="user-logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaUserCircle /></IconButton>
+			</div>
+			<div class="user-logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaSignOutAlt /></IconButton>
+			</div>
 		</div>
 	</div>
 </div>
@@ -45,7 +51,7 @@
 	}
 
 	.logo {
-		width: 6rem;
+		width: 4rem;
 		background-color: lightgreen;
 		border-radius: 8rem;
 		padding: 2rem;
@@ -58,6 +64,11 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
 	}
 
 	h1 {
@@ -83,6 +94,5 @@
 
 	.user-logo {
 		display: flex;
-		width: 2rem;
 	}
 </style>

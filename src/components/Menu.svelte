@@ -29,8 +29,6 @@
 	</List>
 </Menu>
 
-<pre class="status">Clicked: {clicked}</pre>
-
 <style>
 	h3,
 	h4 {
