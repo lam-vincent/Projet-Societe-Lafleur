@@ -4,7 +4,7 @@
 </script>
 
 <LayoutGrid>
-	{#each Array(3) as _unused, i}
+	{#each Array(9) as _unused, i}
 		<Cell>
 			<div class="demo-cell"><Card /></div>
 		</Cell>
@@ -13,11 +13,9 @@
 
 <style>
 	.demo-cell {
-		height: 60px;
+		height: 12rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--mdc-theme-secondary, #333);
-		color: var(--mdc-theme-on-secondary, #fff);
 	}
 </style>

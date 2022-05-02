@@ -1,112 +1,99 @@
 <script lang="ts">
-	export let name = '';
+	import FaMinusCircle from 'svelte-icons/fa/FaMinusCircle.svelte';
+	import FaPlusCircle from 'svelte-icons/fa/FaPlusCircle.svelte';
+
+	export let amount = 0;
 </script>
 
 <div class="card">
-    <div class="profil-picture">
-      <a href="{{github}}"><i class="fas fa-user fa-3x"></i></a>
-    </div>
-    <div class="icones">
-      <i class="fab fa-twitter fa-2x"></i>
-      <a href=""><i class="fab fa-github fa-2x"></i></a>
-      <i class="fab fa-google-plus-g fa-2x"></i>
-      <i class="fas fa-cubes fa-2x"></i>
-    </div>
-    <div class="stats">
-      <div class="left">
-        <h4>{{person.upvoted}}</h4>
-        <span>Upvoted</span>
-        <h4>{{person.showcased}}</h4>
-        <span>Showcased</span>
-        <h4>{{person.followers}}</h4>
-        <span>Followers</span>
-      </div>
-      <div class="right">
-        <h4>{{person.created}}</h4>
-        <span>Created</span>
-        <h4>{{person.collections}}</h4>
-        <span>Collections</span>
-        <h4>{{person.following}}</h4>
-        <span>Following</span>
-      </div>
-    </div>
-  </div>
+	<div class="image">
+		<span>purple lilac</span>
+	</div>
+	<div class="details">
+		<div class="stats">
+			<span class="information">réf : r01</span>
+			<span class="information">10 €</span>
+			<span class="information">quantité : 10</span>
+		</div>
+		<div class="content">une très belle fleur</div>
+		<div class="order">
+			<div class="logo"><FaMinusCircle /></div>
+			<input bind:value={amount} />
+			<div class="logo"><FaPlusCircle /></div>
+			<span class="basket">Ajouter au panier</span>
+		</div>
+	</div>
+</div>
 
 <style>
-:root {
-  --main-bg-color: pink;
-  --yellow: #ffd543;
-  --blue: #5bb5f8;
-  --black: #33454f;
-}
+	.card {
+		display: flex;
+		width: 34rem;
+		height: 12rem;
+	}
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: var(--blue);
-  font-family: "Roboto", sans-serif;
-  color: var(--black);
-  font-size: 1.25rem;
-}
+	.image {
+		background-image: url('https://www.larbre-yoga.fr/wp-content/uploads/2019/03/flower-purple-lical-blosso.jpg');
+		background-size: cover;
+		width: 16rem;
+		height: 12rem;
+		border-radius: 1rem;
 
-.card {
-  background-color: var(--yellow);
-  width: 30rem;
-  height: 40rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 3rem;
-  box-shadow: 2px 8px 13px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
 
-.profil-picture {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
-}
+	.details {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		background-color: #e5e7eb;
+		width: 18rem;
+		height: 12rem;
+		border-radius: 1rem;
+		transform: translate(-2rem, 0);
+	}
 
-.stats {
-  width: 30rem;
-  margin-top: 0.9rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+	.stats {
+		display: flex;
+		justify-content: space-evenly;
+	}
 
-.icones {
-  margin-top: 1.3rem;
-  width: 15rem;
-  display: flex;
-  justify-content: space-between;
-}
+	.information {
+		text-align: center;
+		background-color: lightgreen;
+		border-radius: 4rem;
+		padding: 0.5rem;
+	}
 
-.left,
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+	.content {
+		display: flex;
+		justify-content: space-evenly;
+	}
 
-h4 {
-  margin: 0;
-  margin-bottom: 1.2rem;
-  margin-top: 1.6rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
+	.order {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 
-a {
-  color: var(--black);
-  text-decoration: none;
-}
+	.logo {
+		width: 2rem;
+		display: flex;
+		align-items: center;
+	}
+
+	input {
+		width: 2rem;
+		height: 1rem;
+	}
+
+	.basket {
+		text-align: center;
+		background-color: lightgreen;
+		border-radius: 4rem;
+		padding: 0.6rem;
+	}
 </style>
