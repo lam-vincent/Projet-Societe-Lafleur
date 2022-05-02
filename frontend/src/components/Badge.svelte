@@ -2,7 +2,7 @@
 	import Badge from '@smui-extra/badge';
 	import FaShoppingBasket from 'svelte-icons/fa/FaShoppingBasket.svelte';
 
-	import IconButton, { Icon } from '@smui/icon-button';
+	import IconButton from '@smui/icon-button';
 </script>
 
 <IconButton
