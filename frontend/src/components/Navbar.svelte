@@ -16,10 +16,18 @@
 			<Label>{tab}</Label>
 		</Tab>
 	</TabBar>
-
-	<div style="margin-top: 1em;">
+	
+	<div class="bar">
 		{#each ['Accueil', 'Bulbes', 'Rosiers', 'Plantes à massif', 'Contact'] as tab}
 			<Button on:click={() => (active = tab)}><Label>{tab}</Label></Button>
 		{/each}
 	</div>
 </div>
+
+
+<style>
+	.bar{
+		margin-top: 1em;
+		display: none;
+	}
+</style>
