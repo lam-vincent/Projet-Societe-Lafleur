@@ -6,6 +6,7 @@
 	import IconButton from '@smui/icon-button';
 	import FaUserCircle from 'svelte-icons/fa/FaUserCircle.svelte';
 	import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte';
+	import FaSignInAlt from 'svelte-icons/fa/FaSignInAlt.svelte'
 	let clicked = 0;
 </script>
 
@@ -20,6 +21,18 @@
 	<div class="container">
 		<Badge />
 		<div class="user">
+			<span class="username">déconnecté</span>
+			<div class="user-logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaUserCircle /></IconButton>
+			</div>
+			<div class="user-logo">
+				<IconButton class="material-icons" on:click={() => clicked++}><FaSignInAlt /></IconButton>
+			</div>
+		</div>
+
+		<!-- 
+			
+		<div class="user">
 			<span class="username">Vincent LAM</span>
 			<div class="user-logo">
 				<IconButton class="material-icons" on:click={() => clicked++}><FaUserCircle /></IconButton>
@@ -28,6 +41,8 @@
 				<IconButton class="material-icons" on:click={() => clicked++}><FaSignOutAlt /></IconButton>
 			</div>
 		</div>
+
+		 -->
 	</div>
 </div>
 
