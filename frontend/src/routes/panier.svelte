@@ -1,9 +1,8 @@
 <script>
 	import Layout from '../components/Layout.svelte';
-    import Text from '../components/Text.svelte';
+    import List from '../components/List.svelte';
 </script>
 
 <Layout>
-	<Text label="Nom" value="Entrez votre nom" />
-	<Text label="Prénom" value="Entrez votre prénom" />
+	<List/>
 </Layout>
