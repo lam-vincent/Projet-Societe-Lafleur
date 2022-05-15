@@ -6,26 +6,27 @@
 </script>
 
 <Menu static>
-	<List>
-		<h3>Sté Lafleur</h3>
+	<List class="list">
+		<h3 class="list">Sté Lafleur</h3>
 		<Item on:SMUI:action={() => (clicked = 'Accueil')}>
-			<Text>Accueil</Text>
+			<Text class="list">Accueil</Text>
 		</Item>
 		<Separator />
-		<h4><u>Nos produits</u></h4>
+		<h4 class="list"><u>Nos produits</u></h4>
 		<Item on:SMUI:action={() => (clicked = 'Bulbes')}>
-			<Text>Bulbes</Text>
+			<Text class="list">Bulbes</Text>
 		</Item>
 		<Item on:SMUI:action={() => (clicked = 'Rosiers')}>
-			<Text>Rosiers</Text>
+			<Text class="list">Rosiers</Text>
 		</Item>
 		<Item on:SMUI:action={() => (clicked = 'Plantes à massif')}>
-			<Text>Plantes à massif</Text>
+			<Text class="list">Plantes à massif</Text>
 		</Item>
 		<Separator />
 		<Item on:SMUI:action={() => (clicked = 'Contact')}>
-			<Text>Contact</Text>
+			<Text class="list">Contact</Text>
 		</Item>
+		<div class="space"></div>
 	</List>
 </Menu>
 
@@ -33,5 +34,13 @@
 	h3,
 	h4 {
 		text-align: center;
+	}
+
+	.list {
+    	width: 20rem;
+  	}
+
+	.space{
+		height: 17rem;
 	}
 </style>
