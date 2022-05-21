@@ -3,7 +3,7 @@
 </script>
 
 <div class="grid">
-	{#each Array(9) as _unused, i}
+	{#each Array(5) as _unused, i}
 		<div class="demo-cell"><Card /></div>
 	{/each}
 </div>
