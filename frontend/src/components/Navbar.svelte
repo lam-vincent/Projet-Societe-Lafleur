@@ -1,7 +1,6 @@
 <script>
 	import Tab, { Label } from '@smui/tab';
 	import TabBar from '@smui/tab-bar';
-	import Button from '@smui/button';
 	import { fetchFlowerTypes } from '../api/flowerType';
 
 	let active = 'Accueil';
