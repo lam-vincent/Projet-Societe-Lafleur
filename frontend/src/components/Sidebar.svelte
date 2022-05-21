@@ -1,33 +1,32 @@
 <script lang="ts">
 	import Menu from '@smui/menu';
 	import List, { Item, Separator, Text } from '@smui/list';
-
 	let clicked = 'nothing yet';
 </script>
 
 <Menu static>
-	<List class="list">
+	<List>
 		<h3 class="list">Sté Lafleur</h3>
 		<Item on:SMUI:action={() => (clicked = 'Accueil')}>
-			<Text class="list">Accueil</Text>
+			<Text>Accueil</Text>
 		</Item>
 		<Separator />
-		<h4 class="list"><u>Nos produits</u></h4>
+		<h4><u>Nos produits</u></h4>
 		<Item on:SMUI:action={() => (clicked = 'Bulbes')}>
-			<Text class="list">Bulbes</Text>
+			<Text>Bulbes</Text>
 		</Item>
 		<Item on:SMUI:action={() => (clicked = 'Rosiers')}>
-			<Text class="list">Rosiers</Text>
+			<Text>Rosiers</Text>
 		</Item>
 		<Item on:SMUI:action={() => (clicked = 'Plantes à massif')}>
-			<Text class="list">Plantes à massif</Text>
+			<Text>Plantes à massif</Text>
 		</Item>
 		<Separator />
 		<Item on:SMUI:action={() => (clicked = 'Contact')}>
-			<Text class="list">Contact</Text>
+			<Text>Contact</Text>
 		</Item>
-		<div class="space" />
 	</List>
+	<div class="space" />
 </Menu>
 
 <style>
@@ -41,6 +40,6 @@
 	}
 
 	.space {
-		height: 17rem;
+		height: 50vh;
 	}
 </style>
