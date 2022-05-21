@@ -1,15 +1,12 @@
 <script lang="ts">
-	import LayoutGrid, { Cell } from '@smui/layout-grid';
 	import Card from './Card.svelte';
 </script>
 
-<LayoutGrid>
+<div class="grid">
 	{#each Array(9) as _unused, i}
-		<Cell>
-			<div class="demo-cell"><Card /></div>
-		</Cell>
+		<div class="demo-cell"><Card /></div>
 	{/each}
-</LayoutGrid>
+</div>
 
 <style>
 	.demo-cell {
@@ -17,5 +14,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+		margin: 1rem;
 	}
 </style>
