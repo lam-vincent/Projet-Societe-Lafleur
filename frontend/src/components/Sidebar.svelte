@@ -1,30 +1,21 @@
 <script lang="ts">
 	import Menu from '@smui/menu';
-	import List, { Item, Separator, Text } from '@smui/list';
-	let clicked = 'nothing yet';
+	import List, { Separator } from '@smui/list';
 </script>
 
 <Menu static>
 	<List>
 		<h3 class="list">Sté Lafleur</h3>
-		<Item on:SMUI:action={() => (clicked = 'Accueil')}>
-			<Text>Accueil</Text>
-		</Item>
+		<button> <a href="http://localhost:3000/">Accueil</a> </button>
 		<Separator />
 		<h4><u>Nos produits</u></h4>
-		<Item on:SMUI:action={() => (clicked = 'Bulbes')}>
-			<Text>Bulbes</Text>
-		</Item>
-		<Item on:SMUI:action={() => (clicked = 'Rosiers')}>
-			<Text>Rosiers</Text>
-		</Item>
-		<Item on:SMUI:action={() => (clicked = 'Plantes à massif')}>
-			<Text>Plantes à massif</Text>
-		</Item>
+		<button> <a href="http://localhost:3000/bulbes">Bulbes</a> </button> <br /> <br />
+		<button>
+			<a href="http://localhost:3000/rosiers">Rosiers</a>
+		</button> <br /> <br />
+		<button> <a href="http://localhost:3000/plantes-a-massif">Plantes à massif</a> </button>
 		<Separator />
-		<Item on:SMUI:action={() => (clicked = 'Contact')}>
-			<Text>Contact</Text>
-		</Item>
+		<button> <a href="http://localhost:3000/contact">Contact</a> </button>
 	</List>
 	<div class="space" />
 </Menu>
@@ -40,6 +31,6 @@
 	}
 
 	.space {
-		height: 50vh;
+		height: 55vh;
 	}
 </style>
