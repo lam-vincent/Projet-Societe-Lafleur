@@ -6,19 +6,24 @@
 
 	let clicked = 0;
 	export let amount = 0;
+	export let name;
+	export let id;
+	export let price;
+	export let stock;
+	export let description;
 </script>
 
 <div class="card">
 	<div class="image">
-		<span>purple lilac</span>
+		<span>{name}</span>
 	</div>
 	<div class="details">
 		<div class="stats">
-			<span class="information">réf : r01</span>
-			<span class="information">10 €</span>
-			<span class="information">quantité : 10</span>
+			<span class="information">réf : {id}</span>
+			<span class="information">{price} €</span>
+			<span class="information">quantité : {stock}</span>
 		</div>
-		<div class="content">une très belle fleur</div>
+		<div class="content">{description}</div>
 		<div class="order">
 			<div class="logo">
 				<IconButton class="material-icons" on:click={() => clicked++}><FaMinusCircle /></IconButton>

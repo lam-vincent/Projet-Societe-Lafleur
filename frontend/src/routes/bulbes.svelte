@@ -1,11 +1,14 @@
 <script>
 	import Layout from '../components/Layout.svelte';
 	import Grid from '../components/Grid.svelte';
-	import { fetchFlowers } from '../api/bulbes';
+	import { fetchFlowers } from '../api/flowers';
 
-	fetchFlowers();
+	let flowers = [];
+	(async () => {
+		flowers = await fetchFlowers('bulbes');
+	})();
 </script>
 
 <Layout>
-	<Grid />
+	<Grid {flowers} />
 </Layout>

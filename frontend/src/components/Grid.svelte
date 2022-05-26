@@ -1,10 +1,20 @@
-<script lang="ts">
+<script>
 	import Card from './Card.svelte';
+
+	export let flowers = [];
 </script>
 
 <div class="grid">
-	{#each Array(5) as _unused, i}
-		<div class="demo-cell"><Card /></div>
+	{#each flowers as flower}
+		<div class="demo-cell">
+			<Card
+				id={flower._id.slice(3, 7)}
+				name={flower.name}
+				description={flower.description}
+				stock={flower.stock}
+				price={flower.price}
+			/>
+		</div>
 	{/each}
 </div>
 
