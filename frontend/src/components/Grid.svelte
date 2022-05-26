@@ -13,6 +13,7 @@
 				description={flower.description}
 				stock={flower.stock}
 				price={flower.price}
+				picture={flower.picture}
 			/>
 		</div>
 	{/each}

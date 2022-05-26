@@ -52,4 +52,13 @@ export function flowersRoute(app) {
     const flowers = await Flowers.find({ flowerType: flowerType.id });
     return res.json(flowers);
   });
+  app.delete("/flowers/:id", async (req, res) => {
+    try {
+      const id = req.params.id;
+      const flowers = await Flowers.findByIdAndDelete(id);
+      res.json(flowers);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 }

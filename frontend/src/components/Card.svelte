@@ -5,16 +5,16 @@
 	import IconButton from '@smui/icon-button';
 
 	let clicked = 0;
-	export let amount = 0;
 	export let name;
 	export let id;
 	export let price;
 	export let stock;
 	export let description;
+	export let picture;
 </script>
 
 <div class="card">
-	<div class="image">
+	<div class="image" style="background-image: url({picture});">
 		<span>{name}</span>
 	</div>
 	<div class="details">
@@ -26,11 +26,25 @@
 		<div class="content">{description}</div>
 		<div class="order">
 			<div class="logo">
-				<IconButton class="material-icons" on:click={() => clicked++}><FaMinusCircle /></IconButton>
+				<IconButton
+					class="material-icons"
+					on:click={() => {
+						if (clicked > 0) {
+							clicked--;
+						}
+					}}><FaMinusCircle /></IconButton
+				>
 			</div>
-			<input bind:value={amount} />
+			<input bind:value={clicked} type="number" min="0" max={stock} />
 			<div class="logo">
-				<IconButton class="material-icons" on:click={() => clicked++}><FaPlusCircle /></IconButton>
+				<IconButton
+					class="material-icons"
+					on:click={() => {
+						if (clicked < stock) {
+							clicked++;
+						}
+					}}><FaPlusCircle /></IconButton
+				>
 			</div>
 			<span class="basket">
 				<Button on:click={() => clicked++} variant="raised">
@@ -49,7 +63,6 @@
 	}
 
 	.image {
-		background-image: url('https://www.larbre-yoga.fr/wp-content/uploads/2019/03/flower-purple-lical-blosso.jpg');
 		background-size: cover;
 		width: 16rem;
 		height: 12rem;
@@ -59,6 +72,10 @@
 		justify-content: center;
 		align-items: center;
 		color: #fff;
+	}
+
+	.image span {
+		text-shadow: black 0.2rem 0.2rem 0.2rem;
 	}
 
 	.details {
