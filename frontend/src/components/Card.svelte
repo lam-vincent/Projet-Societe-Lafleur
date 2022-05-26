@@ -104,6 +104,9 @@
 	.content {
 		display: flex;
 		justify-content: space-evenly;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		text-align: center;
 	}
 
 	.order {
