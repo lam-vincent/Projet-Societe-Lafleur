@@ -8,8 +8,41 @@
 	import Textarea from '../components/Textarea.svelte';
 	import Button from '../components/Button.svelte';
 
-	function submit() {
-		console.log('rien');
+	share = async (email, Name, Surname, Date, Body, Subject) => {
+	  const args = {
+	    Destination: {
+	      ToAddresses: societelafleur5@gmail.com
+	    },
+	    Message: {
+	      Body: {
+		Html: {
+		  Charset: 'UTF-8',
+		  Data: `
+		      <h1>Mail envoyer par [Name] [Surname] le [Date]</h1>
+		      [Body]
+		      (Contact [email])
+		      `
+		}
+	      },
+	      Subject: {
+		Charset: 'UTF-8',
+		Data: `[Subject]`
+	      }
+	    },
+	    Source: 'picstream@ses.aydrian.me'
+	  }
+
+	  const request = new AwsRequest.Builder()
+	    .withService('ses')
+	    .withAction('SendEmail')
+	    .withRegion('us-east-1')
+	    .withArgs(args)
+	    .build()
+
+	  return this.aws.execute(request)
+	}
+	function submit(){
+		share(email, Name, Surname, Date, Body, Subject);
 	}
 </script>
 
@@ -19,11 +52,6 @@
 	<Text label="Nom" value="Entrez votre nom" />
 	<Text label="Prénom" value="Entrez votre prénom" />
 	<Email label="Email" value="monmail@monsite.org" />
-	<!-- 
-	<Radio label="Genre" />
-	<Date label="Date de naissance" />
-	<Select label="Fonction" fruits={['enseignant', 'enseignant']} />
-	 -->
 	<Text label="Sujet" value="Entrez le sujet de votre mail" />
 	<Textarea label="Contenu" helper="Tapez ici votre mail" />
 
