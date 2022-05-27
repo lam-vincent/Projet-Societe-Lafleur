@@ -9,6 +9,7 @@
 	style="position: relative; 
     background-color: lightgreen;
     border-radius: 2rem;"
+	href="http://localhost:3000/panier"
 >
 	<FaShoppingBasket />
 	<Badge aria-label="unread content count">2</Badge>

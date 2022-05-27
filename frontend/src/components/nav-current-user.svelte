@@ -1,19 +1,23 @@
 <script>
-    import IconButton from '@smui/icon-button';
+	import IconButton from '@smui/icon-button';
 	import FaUserCircle from 'svelte-icons/fa/FaUserCircle.svelte';
 	import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte';
-	import FaSignInAlt from 'svelte-icons/fa/FaSignInAlt.svelte'
-    let clicked = 0;
+	import FaSignInAlt from 'svelte-icons/fa/FaSignInAlt.svelte';
+	let clicked = 0;
 </script>
 
 <div class="user">
-    <span class="username">déconnecté</span>
-    <div class="user-logo">
-        <IconButton class="material-icons" on:click={() => clicked++}><FaUserCircle /></IconButton>
-    </div>
-    <div class="user-logo">
-        <IconButton class="material-icons" on:click={() => clicked++}><FaSignInAlt /></IconButton>
-    </div>
+	<span class="username">déconnecté</span>
+	<div class="user-logo">
+		<IconButton class="material-icons" href="http://localhost:3000/profil"
+			><FaUserCircle /></IconButton
+		>
+	</div>
+	<div class="user-logo">
+		<IconButton class="material-icons" href="http://localhost:3000/sign-in"
+			><FaSignInAlt /></IconButton
+		>
+	</div>
 </div>
 
 <!-- 
@@ -29,9 +33,8 @@
 </div>
 
  -->
-
 <style>
-    .user {
+	.user {
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
