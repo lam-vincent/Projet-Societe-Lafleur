@@ -3,7 +3,6 @@
 	import { Icon as CommonIcon } from '@smui/common';
 
 	let valueElementsLabel = '';
-	export let value = '';
 	export let label = '';
 </script>
 
@@ -14,7 +13,6 @@
 				class="material-icons"
 				style="font-size: 1em; line-height: normal; vertical-align: top;">{label}</CommonIcon
 			>
-			{value}
 		</svelte:fragment>
 	</Textfield>
 </div>
@@ -24,6 +22,6 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
-		width: 20rem;
+		width: 15rem;
 	}
 </style>

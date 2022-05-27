@@ -2,7 +2,7 @@
 	import Textfield from '@smui/textfield';
 	import FaRegCalendarAlt from 'svelte-icons/fa/FaRegCalendarAlt.svelte';
 
-	let valueTypeDate = '';
+	export let valueTypeDate = '';
 	export let label = '';
 </script>
 

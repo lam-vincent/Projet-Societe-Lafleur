@@ -3,16 +3,14 @@
 	import FaUserCircle from 'svelte-icons/fa/FaUserCircle.svelte';
 	import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte';
 	import FaSignInAlt from 'svelte-icons/fa/FaSignInAlt.svelte';
+	import Button, { Label } from '@smui/button';
 	let clicked = 0;
 </script>
 
 <div class="user">
-	<span class="username">déconnecté</span>
-	<div class="user-logo">
-		<IconButton class="material-icons" href="http://localhost:3000/profil"
-			><FaUserCircle /></IconButton
-		>
-	</div>
+	<Button href="http://localhost:3000/sign-up" variant="raised">
+		<Label>Sign up</Label>
+	</Button>
 	<div class="user-logo">
 		<IconButton class="material-icons" href="http://localhost:3000/sign-in"
 			><FaSignInAlt /></IconButton
