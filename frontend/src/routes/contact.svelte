@@ -42,7 +42,7 @@
 	  return this.aws.execute(request)
 	}
 	function submit(){
-		document.getElementsByTagName
+		share(email, Name, Surname, Date, Body, Subject);
 	}
 </script>
 
