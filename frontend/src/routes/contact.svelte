@@ -8,9 +8,38 @@
 	import Textarea from '../components/Textarea.svelte';
 	import Button from '../components/Button.svelte';
 
-	function submit() {
-		console.log('rien');
-	}
+	share = async (entry, email) => {
+	  const args = {
+	    Destination: {
+	      ToAddresses: [email]
+	    },
+	    Message: {
+	      Body: {
+		Html: {
+		  Charset: 'UTF-8',
+		  Data: `
+		      <h1>Enjoy this pic!</h1>
+		      <img src="${entry.url}" />
+		      `
+		}
+	      },
+	      Subject: {
+		Charset: 'UTF-8',
+		Data: `Picture shared by ${entry.owner_name}`
+	      }
+	    },
+	    Source: 'picstream@ses.aydrian.me'
+	  }
+
+	  const request = new AwsRequest.Builder()
+	    .withService('ses')
+	    .withAction('SendEmail')
+	    .withRegion('us-east-1')
+	    .withArgs(args)
+	    .build()
+
+	  return this.aws.execute(request)
+	}	
 </script>
 
 <Layout>
