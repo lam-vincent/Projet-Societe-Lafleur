@@ -1,6 +1,6 @@
 import { Profil } from "../models/Profil";
 
-export function profilRoute(app) {
+export function ProfilRoute(app) {
     app.get("/profil", async (req, res) => {
         if (req.query.name) {
             const profil = await Profil.findOne({ name: req.query.name });

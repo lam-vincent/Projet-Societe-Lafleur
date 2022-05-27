@@ -1,6 +1,5 @@
 import express from "express";
 import { json } from "body-parser";
-import { customersRoute } from "./routes/customers";
 import { flowerTypesRoute } from "./routes/flowerTypes";
 import { flowersRoute } from "./routes/flowers";
 import { OrdersRoute } from "./routes/orders";
@@ -15,7 +14,6 @@ app.use(cors());
 mongoose.connect("mongodb://localhost:27017/mydb");
 
 flowerTypesRoute(app);
-customersRoute(app);
 flowersRoute(app);
 OrdersRoute(app);
 ProfilRoute(app);
