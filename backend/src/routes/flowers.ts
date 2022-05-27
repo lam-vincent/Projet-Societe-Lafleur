@@ -1,5 +1,4 @@
 import { Flowers } from "../models/Flowers";
-import { FlowerType } from "../models/FlowerType";
 import { FlowerTypes } from "../models/FlowerTypes";
 
 export function flowersRoute(app) {
