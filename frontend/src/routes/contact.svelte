@@ -8,24 +8,25 @@
 	import Textarea from '../components/Textarea.svelte';
 	import Button from '../components/Button.svelte';
 
-	share = async (entry, email) => {
+	share = async (email, Name, Surname, Date, Body, Subject) => {
 	  const args = {
 	    Destination: {
-	      ToAddresses: [email]
+	      ToAddresses: societelafleur5@gmail.com
 	    },
 	    Message: {
 	      Body: {
 		Html: {
 		  Charset: 'UTF-8',
 		  Data: `
-		      <h1>Enjoy this pic!</h1>
-		      <img src="${entry.url}" />
+		      <h1>Mail envoyer par [Name] [Surname] le [Date]</h1>
+		      [Body]
+		      (Contact [email])
 		      `
 		}
 	      },
 	      Subject: {
 		Charset: 'UTF-8',
-		Data: `Picture shared by ${entry.owner_name}`
+		Data: `[Subject]`
 	      }
 	    },
 	    Source: 'picstream@ses.aydrian.me'
