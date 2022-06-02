@@ -7,43 +7,6 @@
 	import Select from '../components/Select.svelte';
 	import Textarea from '../components/Textarea.svelte';
 	import Button from '../components/Button.svelte';
-
-	share = async (email, Name, Surname, Date, Body, Subject) => {
-	  const args = {
-	    Destination: {
-	      ToAddresses: societelafleur5@gmail.com
-	    },
-	    Message: {
-	      Body: {
-		Html: {
-		  Charset: 'UTF-8',
-		  Data: `
-		      <h1>Mail envoyer par [Name] [Surname] le [Date]</h1>
-		      [Body]
-		      (Contact [email])
-		      `
-		}
-	      },
-	      Subject: {
-		Charset: 'UTF-8',
-		Data: `[Subject]`
-	      }
-	    },
-	    Source: 'picstream@ses.aydrian.me'
-	  }
-
-	  const request = new AwsRequest.Builder()
-	    .withService('ses')
-	    .withAction('SendEmail')
-	    .withRegion('us-east-1')
-	    .withArgs(args)
-	    .build()
-
-	  return this.aws.execute(request)
-	}
-	function submit(){
-		share(email, Name, Surname, Date, Body, Subject);
-	}
 </script>
 
 <Layout>
